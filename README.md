@@ -7,7 +7,7 @@ All the binding code has automatically been generated with rules defined in [pos
 ### Usage
 
 ```
-$ go get github.com/xlab/libpostal-go/postal
+$ go get github.com/zenhotels/libpostal-go/postal
 ```
 
 ### Demo
@@ -18,7 +18,7 @@ There is an example parser command line utility. You will need to setup your [li
 $ pkg-config --libs libpostal
 -L/usr/local/lib -lpostal
 
-$ go get github.com/xlab/libpostal-go/cmd/postal-parser
+$ go get github.com/zenhotels/libpostal-go/cmd/postal-parser
 
 $ postal-parser Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France
 main.go:40: address components: 6
@@ -40,7 +40,7 @@ main.go:52:
 You will need to get the [cgogen](https://git.io/cgogen) tool installed first.
 
 ```
-$ git clone https://github.com/xlab/libpostal-go && cd libpostal-go
+$ git clone https://github.com/zenhotels/libpostal-go && cd libpostal-go
 $ make clean
 $ make
 ```

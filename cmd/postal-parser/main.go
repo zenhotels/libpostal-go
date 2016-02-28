@@ -7,7 +7,7 @@ import (
 
 	"github.com/apcera/termtables"
 	"github.com/xlab/closer"
-	"github.com/xlab/libpostal-go/postal"
+	"github.com/zenhotels/libpostal-go/postal"
 )
 
 func init() {
