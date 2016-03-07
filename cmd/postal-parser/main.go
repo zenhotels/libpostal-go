@@ -28,11 +28,12 @@ func main() {
 		log.Fatalln("error at libpostal init")
 	}
 	// bind the teardown routine to be called upon exit
+	closer.Bind(postal.Teardown)
 	closer.Bind(postal.TeardownParser)
 
 	// call the libpostal
 	opt := postal.GetLibpostalAddressParserDefaultOptions()
-	resp := postal.ParseAddress([]byte(addr), opt)
+	resp := postal.ParseAddress(append([]byte(addr), '\x00'), opt)
 	defer postal.AddressParserResponseDestroy(resp)
 	resp.Deref()
 
