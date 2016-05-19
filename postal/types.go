@@ -30,7 +30,15 @@ type AddressParserResponse struct {
 	Labels        [][]byte
 }
 
+func (a *AddressParserResponse) Deref() {
+
+}
+
 type AddressParserOptions struct {
 	Language []byte
 	Country  []byte
+}
+
+func (a *AddressParserOptions) Deref() {
+
 }
